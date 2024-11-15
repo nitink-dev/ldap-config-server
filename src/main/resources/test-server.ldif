@@ -1,0 +1,18 @@
+# Define the base DN for the directory
+dn: dc=springframework,dc=org
+objectClass: top
+objectClass: domain
+dc: springframework
+
+# Define the 'people' organizational unit
+dn: ou=people,dc=springframework,dc=org
+objectClass: organizationalUnit
+ou: people
+
+# Define a sample user entry
+dn: uid=testuser,ou=people,dc=springframework,dc=org
+objectClass: inetOrgPerson
+uid: testuser
+cn: Test User
+sn: User
+userPassword: {bcrypt}$2a$10$Dow1nmVzj/1u/EZ.nZxdieo/8sOB60nmF2x2RBNhOvRI3GqI9ULM2
